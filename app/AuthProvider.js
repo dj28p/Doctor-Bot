@@ -2,8 +2,8 @@
 
 import { Auth0Provider } from "@auth0/auth0-react";
 
-const domain = "dev-s28syiljrdegt0jo.us.auth0.com";
-const clientId = "HEZb2a97B6d5s1Djd26G8d9wBYjIcvck";
+const domain = process.env.NEXT_PUBLIC_AUTH0_DOMAIN;
+const clientId = process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID;
 
 export default function AuthProvider({ children }) {
   if (!domain || !clientId) {
